@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.author             = { "LiDan" => "lidanlidan199@163.com" }
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/lidan995744723/LIDAYE.git", :tag => "#{s.version}" }
-  s.source_files  = "LIDAYE", "LIDAYE/LIDAYE/ViewController.{swift}"
+  s.source_files  = "LIDAYE", "LIDAYE/LIDAYE/ViewController.{swift}", "LIDAYE/LIDAYE/ImagePicker.{swift}"
 
 end
