@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "http://EXAMPLE/repositoryDemo.git", :tag => "#{s.version}" }
   s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  # s.dependency "JSONKit", "~> 1.4"
+  s.dependency "SnapKit"
 
 end
