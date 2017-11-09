@@ -12,14 +12,29 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    view.backgroundColor = .white
+    
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "TEST", style: .plain, target: self, action: #selector(testFunc))
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  @objc private func testFunc() {
+    
+    push(with: .cameraIrisHollowOpen, from: self)
+    
+    let vc = UIViewController()
+    vc.view.backgroundColor = .lightGray
+    navigationController?.pushViewController(vc, animated: true)
   }
-
-
 }
 
+extension ViewController: CAAnimationDelegate {
+  
+  func animationDidStart(_ anim: CAAnimation) {
+    
+  }
+  
+  func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+    
+  }
+}
