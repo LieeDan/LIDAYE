@@ -30,11 +30,5 @@ class ViewController: UIViewController {
 
 extension ViewController: CAAnimationDelegate {
   
-  func animationDidStart(_ anim: CAAnimation) {
-    
-  }
-  
-  func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-    
-  }
+
 }

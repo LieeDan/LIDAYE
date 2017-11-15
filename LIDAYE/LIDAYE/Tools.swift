@@ -30,7 +30,6 @@ func stringToTimeStamp(_ stringTime:String) -> String {
 }
 
 // MARK: -- TransitionAnimation
-
 enum TransitionAnimation: String {
   
   case rippleEffect = "rippleEffect"  //波纹效果
@@ -63,4 +62,26 @@ func push(with animationType: TransitionAnimation, from: UIViewController & CAAn
   from.navigationController?.view.layer.add(transition, forKey: nil)
   return transition
 }
+
+// MARK: -- shake
+protocol Shakable where Self: UIView { }
+extension Shakable {
+  func shake() {
+    let animation = CABasicAnimation(keyPath: "position")
+    animation.duration = 0.05
+    animation.repeatCount = 5
+    animation.autoreverses = true
+    animation.fromValue = CGPoint(x: self.center.x - 4.0, y: self.center.y)
+    animation.toValue = CGPoint(x: self.center.x + 4.0, y: self.center.y)
+    layer.add(animation, forKey: "position")
+  }
+}
+
+func setupUI(_ completion: ((Int?) -> Int??)?) {
+  
+}
+
+
+
+
 
