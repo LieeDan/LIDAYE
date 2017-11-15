@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LIDAYE"
-  s.version      = "1.1.0"
+  s.version      = "1.5.0"
   s.summary      = "这是一个简单的LIDAYEdemo示例 自己试试啊"
   s.homepage     = "http://www.baidu.com"
   s.license      = { :type => "MIT", :file => "FILE_LICENSE" }

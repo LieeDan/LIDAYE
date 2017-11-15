@@ -8,6 +8,7 @@
 
 import UIKit
 
+// sui bian gai yi dian dong xi ba
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
